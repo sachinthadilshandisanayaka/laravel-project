@@ -1,11 +1,24 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="relative min-h-screen">
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+<div>
+    <div >
      <h1>Order for {{ $pizza->name }} </h1>
      <p> type - {{ $pizza->type }} </p>
      <p> base - {{ $pizza->base }} </p>
+     <p class="toppings">
+         Extra toppings:
+     </p>
+     <ul>
+        @foreach($pizza->toppings as $topping)
+            <li> {{$topping}} </li>
+        @endforeach
+     </ul>
+    <form action="/pizzas/{{ $pizza->id }}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button>Complete Order</button>
+    </form>
     </div>
 </div>
 @endsection

@@ -17,7 +17,11 @@
             @endif
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-               <h1>Home</h1>
+               <h1>Pizza House</h1>
+               <p class="mssg"> {{ session('mssg') }} </p>
+                <div>
+                    <a href="/pizzas/create" style="color:blue">Order a pizza</a>
+                </div>
             </div>
         </div>
         @endsection
