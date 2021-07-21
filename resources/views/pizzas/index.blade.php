@@ -6,7 +6,7 @@
         <h1>Pizzas</h1>
         @foreach($pizzas as $pizza)
         <div>
-            {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }}
+            <a href="/pizzas/{{ $pizza->id }}" style="text-decoration:underline" > {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }} </a>
         </div>   
         @endforeach
     </div>
