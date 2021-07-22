@@ -20,7 +20,7 @@
                <h1>Pizza House</h1>
                <p class="mssg"> {{ session('mssg') }} </p>
                 <div>
-                    <a href="/pizzas/create" style="color:blue">Order a pizza</a>
+                    <a href="{{ route('pizzas.create')}}" style="color:blue">Order a pizza</a>
                 </div>
             </div>
         </div>

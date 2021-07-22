@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="relative min-h-screen">
@@ -6,7 +6,7 @@
         <h1>Pizzas</h1>
         @foreach($pizzas as $pizza)
         <div>
-            <a href="/pizzas/{{ $pizza->id }}" style="text-decoration:underline" > {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }} </a>
+            <a href="{{ route('pizzas.show', $pizza->id) }}" style="text-decoration:underline" > {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }} </a>
         </div>   
         @endforeach
     </div>
